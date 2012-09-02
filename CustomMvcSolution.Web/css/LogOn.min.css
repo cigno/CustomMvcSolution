@@ -1,0 +1,15 @@
+@font-face{font-family:"Segoe UI Web Light";font-style:normal;font-weight:100;src:local("Segoe UI Light"),local("Segoe UI"),local("Helvetica Neue")}
+@font-face{font-family:"Segoe UI Web Regular";font-style:normal;font-weight:normal;src:local("Segoe UI"),local("Helvetica Neue")}
+@font-face{font-family:"Segoe UI Web Semibold";font-style:normal;font-weight:bold;src:local("Segoe UI Semibold"),local("Segoe UI Bold"),local("Segoe UI"),local("Helvetica Neue")}
+body{font-family:"Segoe UI Web Regular";color:Black;background-color:White;height:100%}
+a{color:#0172c6}
+input[type="text"],input[type="password"]{width:100%;margin:5px 0;padding:5px;border-width:1px;border-style:solid;border-color:#bababa}
+input[type="text"]:focus,input[type="password"]:focus{border-color:Black}
+input[type="submit"].submitButton{text-decoration:none;font-weight:normal;background-color:#0172c6;border-width:1px;border-style:solid;border-color:#0172c6!important;color:White;padding:5px 10px;margin-top:40px}
+input[type="submit"].submitButton:hover{background-color:#0181df}
+table tr td{padding:0 5px}
+div.container{width:935px;margin-left:auto;margin-right:auto;margin-top:40px;padding:0 20px}
+div.container div.left{float:left;width:475px;margin:0;padding:0}
+div.container div.right{float:right;width:420px;margin:0;padding:0}
+div.container div.right h2{color:#0172c6}
+div.container div.right p{font-size:.8em}

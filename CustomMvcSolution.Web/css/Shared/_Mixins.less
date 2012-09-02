@@ -1,0 +1,11 @@
+.button(@backgroundColor, @borderColor) {
+  text-decoration: none;
+  font-weight: normal;
+  background-color: @backgroundColor;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @borderColor !important;
+  &:hover {
+    background-color: lighten(@backgroundColor, 5%);
+  }
+}
