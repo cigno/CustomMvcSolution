@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{770A0167-BB54-4AD1-929D-FED781D62F22}</ProjectGuid>
+    <ProjectGuid>{362E313A-0174-4145-AF3D-1E519EC6EE44}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomMvcSolution.Domain</RootNamespace>
-    <AssemblyName>CustomMvcSolution.Domain</AssemblyName>
+    <RootNamespace>CustomMvcSolution.Resource</RootNamespace>
+    <AssemblyName>CustomMvcSolution.Resource</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,14 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,35 +40,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Attributes\EmailAttribute.cs" />
-    <Compile Include="Entities\Attributes\IndexedAttribute.cs" />
-    <Compile Include="Entities\Attributes\UniqueAttribute.cs" />
-    <Compile Include="Entities\Configurations\MemberConfigurations.cs" />
-    <Compile Include="Entities\Member.cs" />
-    <Compile Include="Entities\Role.cs" />
-    <Compile Include="Infrastructure\DefaultDbContext.cs" />
-    <Compile Include="Initializers\Database\DbInitDevelopment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
-    <Folder Include="Repositories\Database\" />
-    <Folder Include="Repositories\Mock\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomMvcSolution.Helpers\CustomMvcSolution.Helpers.csproj">
-      <Project>{BA16D38B-6C37-4B78-83D8-79F35E256050}</Project>
-      <Name>CustomMvcSolution.Helpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CustomMvcSolution.Resource\CustomMvcSolution.Resource.csproj">
-      <Project>{362E313A-0174-4145-AF3D-1E519EC6EE44}</Project>
-      <Name>CustomMvcSolution.Resource</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Resources.it.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

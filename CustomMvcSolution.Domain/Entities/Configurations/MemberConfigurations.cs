@@ -11,6 +11,9 @@ namespace CustomMvcSolution.Domain.Entities.Configurations
         public MemberConfigurations()
         {
             // Add Here Your Fluent API Configurations...
+            HasKey(m => m.MemberId);
+            Property(m => m.UserName).IsRequired().HasMaxLength(32);
+            Property(m => m.Email).IsRequired().HasMaxLength(256);
         }
     }
 }

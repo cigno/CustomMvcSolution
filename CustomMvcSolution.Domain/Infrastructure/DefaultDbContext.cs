@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Reflection;
 using CustomMvcSolution.Domain.Entities;
 using CustomMvcSolution.Domain.Entities.Attributes;
+using CustomMvcSolution.Domain.Entities.Configurations;
 using CustomMvcSolution.Domain.Infrastructure;
 using CustomMvcSolution.Domain.Initializers.Database;
 
@@ -31,7 +32,7 @@ namespace CustomMvcSolution.Domain.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Add here your Custom Entities Configurations...
-            // modelBuilder.Configurations.Add(new MemberConfigurations());
+            modelBuilder.Configurations.Add(new MemberConfigurations());
         }
     }
 }
@@ -56,7 +57,7 @@ public class DbInitializer : IDatabaseInitializer<DefaultDbContext>
     //
     // ------------------------------------------------
 
-    #region IDatabaseInitializer<RSDbContext> Members
+    #region IDatabaseInitializer<DefaultDbContext> Members
 
     public void InitializeDatabase(DefaultDbContext context)
     {
@@ -129,7 +130,7 @@ public class DbInitializer : IDatabaseInitializer<DefaultDbContext>
             // Populate the database
             
             // DEVELOPMENT
-            DbInitDevelopment.Setup();
+            DbInitDevelopment.Setup(context);
 
             // PRODUCTION
         }

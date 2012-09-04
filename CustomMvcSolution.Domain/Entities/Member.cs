@@ -9,8 +9,10 @@ namespace CustomMvcSolution.Domain.Entities
 
         [Unique]
         [Indexed]
-        public string UserId { get; set; }
+        public string UserName { get; set; }
+
         [Unique]
+        [Email]
         public string Email { get; set; }
         public Profile Profile { get; set; }
         public Role Role { get; set; }
@@ -19,6 +21,8 @@ namespace CustomMvcSolution.Domain.Entities
     public class Profile
     {
         public string FirstName { get; set; }
+
+        [Indexed]
         public string LastName { get; set; }
         public string CompleteName { get; set; }
 
